@@ -1,0 +1,22 @@
+{
+  "name": "toulous",
+  "version": "0.1.0",
+  "description": "A tool to quickly repurpose and generate content.",
+  "main": "index.js",
+  "repository": "git@github.com:dock90/toulous.git",
+  "author": "EdwardGoomba <edward@dock90.io>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "export": "next build && next export"
+  },
+  "dependencies": {
+    "next": "^9.5.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "styled-components": "^5.1.1"
+  }
+}

@@ -1,2 +1,2 @@
-# toulous
-A tool to quickly repourpouse and generate content
+# Toulous
+A tool to quickly repurpose and generate content.
