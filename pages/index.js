@@ -2,6 +2,7 @@ import Link from 'next/link'
 import styled from 'styled-components'
 // components
 import Header from '../components/header'
+import Button from '../components/button'
 
 // styles
 const Container = styled.div`
@@ -9,7 +10,6 @@ const Container = styled.div`
   grid-template-rows: 150px 1fr 150px;
   grid-template-columns: 1fr;
   padding-left: 76px;
-  max-width: 1440px;
 `
 
 const Content = styled.div`
@@ -34,16 +34,6 @@ const Intro = styled.div`
     line-height: 32px;
     margin-bottom: 96px;
     max-width: 350px;
-  }
-
-  button {
-    height: 64px;
-    width: 180px;
-    background: ${({ theme }) => theme.colors.primary};
-    border: none;
-    border-radius: 8px;
-    color: ${({ theme }) => theme.colors.background};
-    font-size: 18px;
   }
 `
 
@@ -73,7 +63,7 @@ const Home = () => {
           <h3>Toulous is a tool that lets you repourpose existing content quickly and originally.</h3>
           <Link href='/fft'>
             <a>
-              <button>Check it Out</button>
+              <Button>Check it Out</Button>
             </a>
           </Link>
         </Intro>
