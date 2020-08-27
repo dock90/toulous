@@ -9,6 +9,8 @@ const Logo = styled.a`
   color: ${({ theme }) => theme.colors.primary};
   text-decoration: none;
   cursor: pointer;
+  display: grid;
+  align-items: center;
 `
 
 const Header = () => (
