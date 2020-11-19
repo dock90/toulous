@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 // styles
 const Logo = styled.a`
-  font-family: 'InterstateMono';
+  font-family: interstate-mono, monospace;
   font-weight: bold;
   font-size: 34px;
   color: ${({ theme }) => theme.colors.primary};

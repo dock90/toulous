@@ -10,6 +10,7 @@ const Container = styled.button`
   color: ${({ theme }) => theme.colors.background};
   font-size: 18px;
   justify-self: ${({ right }) => right ? 'end' : ''};
+  cursor: pointer;
 `
 
 const Button = ({ right, children }) => <Container right={right}>{children}</Container>

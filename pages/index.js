@@ -20,7 +20,7 @@ const Content = styled.div`
 
 const Intro = styled.div`
   h1, h3 {
-    font-family: 'InterstateMono';
+    font-family: interstate-mono, monospace;
     font-weight: bold;
     color: ${({ theme }) => theme.colors.primary};
   }
@@ -38,9 +38,6 @@ const Intro = styled.div`
 `
 
 const Illustration = styled.div`
-  position: absolute;
-  top: 12%;
-  right: -5%;
 
   img {
     height: auto;
@@ -54,6 +51,7 @@ const Illustration = styled.div`
 
 const Home = () => {
   console.log('Oh hey there, thanks for taking a peek at the console.')
+
   return (
     <Container>
       <Header />
@@ -67,9 +65,6 @@ const Home = () => {
             </a>
           </Link>
         </Intro>
-        <Illustration>
-          <img src='./typewriter.png' />
-        </Illustration>
       </Content>
     </Container>
   )
