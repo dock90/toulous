@@ -54,12 +54,21 @@ const Card = styled.div`
 const Fft = () => {
   const [initial, setInitial] = useState(true)
   const [rewrite, setRewrite] = useState(false)
+  const [rows, setRows] = useState(2)
   const [copy, setCopy] = useState('')
   const [splitCopy, setSplitCopy] = useState('')
   const [revisedCopy, setRevisedCopy] = useState([])
   const [revision, setRevision] = useState(false)
   const [finalCopy, setFinalCopy] = useState([])
 
+  const submitText = () => {
+    setCopy(event.target.value)
+    const lines = (event.target.value.length) / 56
+
+    if (lines > 2) {
+      setRows(Math.floor(lines))
+    }
+  }
   const startProcess = () => {
     console.log('Here we go!')
     event.preventDefault()
@@ -112,8 +121,9 @@ const Fft = () => {
             <Card>
               <textarea
                 value={copy}
-                onChange={() => setCopy(event.target.value)}
+                onChange={submitText}
                 placeholder='Copy text here...'
+                rows={rows}
               />
             </Card>
             <Button type='submit' right>Process</Button>
