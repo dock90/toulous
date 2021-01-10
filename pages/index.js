@@ -5,7 +5,7 @@ import Layout from '../components/layout'
 import Button from '../components/button'
 
 // styles
-const Content = styled.div`
+const Container = styled.div`
   display: grid;
   grid-template-rows: 1fr;
   grid-template-columns: 1fr 1fr;
@@ -34,7 +34,7 @@ const Intro = styled.div`
 const Home = () => {
   return (
     <Layout>
-      <Content>
+      <Container>
         <Intro>
           <h1>Reimagine content creation.</h1>
           <h3>Toulous is a tool that lets you repourpose existing content quickly and originally.</h3>
@@ -44,7 +44,7 @@ const Home = () => {
             </a>
           </Link>
         </Intro>
-      </Content>
+      </Container>
     </Layout>
   )
 }
