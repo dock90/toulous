@@ -58,7 +58,7 @@ const Fft = () => {
   const [splitCopy, setSplitCopy] = useState('')
   const [revisedCopy, setRevisedCopy] = useState([])
   const [revision, setRevision] = useState(false)
-  const [finalCopy, setFinalCopy] = useState('')
+  const [finalCopy, setFinalCopy] = useState([])
 
   const startProcess = () => {
     console.log('Here we go!')
@@ -79,17 +79,14 @@ const Fft = () => {
   }
 
   const updateCopy = (id) => {
-    console.log(id)
-    console.log(event.target.value)
-    const filteredCopy = splitCopy.filter(data => data.id != id)
+    const selectedCopy = splitCopy.map(copy => {
+      if (copy.id === id) {
+        copy.newText = event.target.value
+      }
+      return copy
+    })
 
-    setRevisedCopy([
-      ...filteredCopy,
-      {
-        id: id,
-        text: event.target.value
-      },
-    ])
+    setRevisedCopy(selectedCopy)
   }
 
   const combineEdits = () => {
@@ -97,8 +94,13 @@ const Fft = () => {
     setRewrite(false)
     setRevision(true)
 
-    const combinedText = revisedCopy.map(copy => copy.text)
-    setFinalCopy(combinedText.join(','))
+    const combinedText = revisedCopy.map(copy => {
+      if (copy.newText) {
+        return copy.newText
+      }
+      return copy.text
+    })
+    setFinalCopy(combinedText)
   }
 
   return (
@@ -138,9 +140,8 @@ const Fft = () => {
         }
         {revision &&
           <Card>
-            {revisedCopy.map(copy => {
-              const { id, text } = copy
-              return <h3>{text}</h3>
+            {finalCopy.map(copy => {
+              return <h3>{copy}</h3>
             })}
           </Card>
         }
