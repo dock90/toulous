@@ -1,27 +1,21 @@
 import Link from 'next/link'
 import styled from 'styled-components'
 // components
-import Header from '../components/header'
+import Layout from '../components/layout'
 import Button from '../components/button'
 
 // styles
-const Container = styled.div`
-  display: grid;
-  grid-template-rows: 150px 1fr 150px;
-  grid-template-columns: 1fr;
-  padding-left: 76px;
-`
-
 const Content = styled.div`
   display: grid;
   grid-template-rows: 1fr;
   grid-template-columns: 1fr 1fr;
+  padding-left: 76px;
 `
 
 const Intro = styled.div`
   h1, h3 {
     font-family: interstate-mono, monospace;
-    font-weight: bold;
+    font-weight: 700;
     color: ${({ theme }) => theme.colors.primary};
   }
 
@@ -37,24 +31,9 @@ const Intro = styled.div`
   }
 `
 
-const Illustration = styled.div`
-
-  img {
-    height: auto;
-    width: 100%;
-  }
-
-  @media screen and (max-width: 1300px) {
-    display: none;
-  }
-`
-
 const Home = () => {
-  console.log('Oh hey there, thanks for taking a peek at the console.')
-
   return (
-    <Container>
-      <Header />
+    <Layout>
       <Content>
         <Intro>
           <h1>Reimagine content creation.</h1>
@@ -66,7 +45,7 @@ const Home = () => {
           </Link>
         </Intro>
       </Content>
-    </Container>
+    </Layout>
   )
 }
 

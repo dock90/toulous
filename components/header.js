@@ -2,6 +2,11 @@ import Link from 'next/link'
 import styled from 'styled-components'
 
 // styles
+const Container = styled.div`
+  display: grid;
+  align-content: center;
+`
+
 const Logo = styled.a`
   font-family: interstate-mono, monospace;
   font-weight: bold;
@@ -9,14 +14,15 @@ const Logo = styled.a`
   color: ${({ theme }) => theme.colors.primary};
   text-decoration: none;
   cursor: pointer;
-  display: grid;
-  align-items: center;
+  margin-left: 76px;
 `
 
 const Header = () => (
-  <Link href='/'>
-    <Logo>toulous</Logo>
-  </Link>
+  <Container>
+    <Link href='/'>
+      <Logo>toulous</Logo>
+    </Link>
+  </Container>
 )
 
 export default Header

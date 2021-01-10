@@ -1,25 +1,20 @@
 import { useState } from 'react'
 import styled from 'styled-components'
 // components
-import Header from '../components/header'
+import Layout from '../components/layout'
 import Button from '../components/button'
 
 // styles
-const Container = styled.div`
-  display: grid;
-  grid-template-rows: 150px 1fr 150px;
-  grid-template-columns: 1fr;
-  padding-left: 76px;
-  padding-right: 76px;
-`
-
 const Content = styled.div`
   display: grid;
   grid-template-rows: 1fr;
   grid-template-columns: 1fr;
+  padding-left: 76px;
+  padding-right: 76px;
 
   form {
     display: grid;
+    align-content: start;
   }
 `
 
@@ -33,8 +28,7 @@ const Card = styled.div`
 
   textarea {
     height: auto;
-    min-width: 84vw;
-    max-width: 84vw;
+    width: 80vw;
     outline: none;
     border: none;
     font-size: 32px;
@@ -72,19 +66,21 @@ const Fft = () => {
   const startProcess = () => {
     console.log('Here we go!')
     event.preventDefault()
-    setInitial(false)
-    setRewrite(true)
 
     const splitCopy = copy.match(/[^\.!\?]+[\.!\?]+/g)
 
-    const formattedCopy = splitCopy.map(text => {
-      return {
-        id: Math.floor(Math.random() * 400),
-        text: text.trim()
-      }
-    })
+    if (splitCopy) {
+      setInitial(false)
+      setRewrite(true)
+      const formattedCopy = splitCopy.map(text => {
+        return {
+          id: Math.floor(Math.random() * 400),
+          text: text.trim()
+        }
+      })
 
-    setSplitCopy(formattedCopy)
+      setSplitCopy(formattedCopy)
+    }
   }
 
   const updateCopy = (id) => {
@@ -113,8 +109,7 @@ const Fft = () => {
   }
 
   return (
-    <Container>
-      <Header />
+    <Layout>
       <Content>
         {initial &&
           <form onSubmit={startProcess}>
@@ -156,7 +151,7 @@ const Fft = () => {
           </Card>
         }
       </Content>
-    </Container>
+    </Layout>
   )
 }
 
