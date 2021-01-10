@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import Link from 'next/link'
 import styled from 'styled-components'
 // components
@@ -38,10 +39,14 @@ const Intro = styled.div`
 const Home = () => {
   return (
     <Layout>
+      <Head>
+        <title>Toulous</title>
+        <meta name="description" content="A tool that lets you repurpose existing content quickly and originally." />
+      </Head>
       <Container>
         <Intro>
           <h1>Reimagine content creation.</h1>
-          <h3>Toulous is a tool that lets you repourpose existing content quickly and originally.</h3>
+          <h3>Toulous is a tool that lets you repurpose existing content quickly and originally.</h3>
           <Link href='/fft'>
             <a>
               <Button>Check it Out</Button>

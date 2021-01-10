@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Head from 'next/head'
 import styled from 'styled-components'
 // components
 import Layout from '../components/layout'
@@ -113,6 +114,10 @@ const Fft = () => {
 
   return (
     <Layout>
+      <Head>
+        <title>Toulous | 😼 Meow! Fft, fft, fft!</title>
+        <meta name="description" content="Meow! Fft, fft, fft! Its not easy being a tough alley cat." />
+      </Head>
       <Content>
         {initial &&
           <form onSubmit={startProcess}>

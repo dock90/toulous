@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import Link from 'next/link';
 import styled from 'styled-components'
 // components
@@ -45,6 +46,10 @@ const query = `*[_type == "post"] | order(_createdAt desc) {
 const Posts = ({ posts }) => {
   return (
     <Layout>
+      <Head>
+        <title>Toulous | 📚 Blog</title>
+        <meta name="description" content="A collection of posts covering topics covering startup content marketing." />
+      </Head>
       <Container>
         {posts.map(post => {
           const { _id, slug: { current }, title, overview } = post
