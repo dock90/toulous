@@ -8,6 +8,10 @@ import sanity from '../client'
 const Container = styled.div`
   padding: 18px 76px;
 
+  @media screen and (max-width: 414px) {
+    padding: 0 20px;
+  }
+
   article {
     max-width: 600px;
   }
@@ -15,6 +19,7 @@ const Container = styled.div`
   h2 {
     font-family: interstate-mono, monospace;
     font-weight: 700;
+    font-size: 36px;
     color: ${({ theme }) => theme.colors.primary};
   }
 

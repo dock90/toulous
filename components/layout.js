@@ -7,7 +7,7 @@ import Footer from '../components/footer'
 // styles
 const Container = styled.div`
   display: grid;
-  grid-template-rows: 100px 1fr 80px;
+  grid-template-rows: 100px auto 100px;
   grid-template-columns: 1fr;
   height: 100vh;
 `

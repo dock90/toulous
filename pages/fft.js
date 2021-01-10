@@ -8,8 +8,11 @@ import Button from '../components/button'
 const Content = styled.div`
   display: grid;
   align-content: start;
-  padding-left: 76px;
-  padding-right: 76px;
+  padding: 0 76px;
+
+  @media screen and (max-width: 414px) {
+    padding: 0 20px;
+  }
 
   form {
     display: grid;

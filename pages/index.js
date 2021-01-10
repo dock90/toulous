@@ -8,8 +8,12 @@ import Button from '../components/button'
 const Container = styled.div`
   display: grid;
   grid-template-rows: 1fr;
-  grid-template-columns: 1fr 1fr;
-  padding-left: 76px;
+  grid-template-columns: 1fr;
+  padding: 0 76px;
+
+  @media screen and (max-width: 414px) {
+    padding: 0 20px;
+  }
 `
 
 const Intro = styled.div`

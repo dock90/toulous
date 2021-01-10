@@ -8,6 +8,10 @@ const Container = styled.div`
   align-content: center;
   padding: 0 76px;
 
+  @media screen and (max-width: 414px) {
+    padding: 0 20px;
+  }
+
   a {
     font-family: interstate-mono, monospace;
     color: ${({ theme }) => theme.colors.primary};

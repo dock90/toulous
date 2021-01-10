@@ -10,6 +10,10 @@ const Container = styled.div`
   margin: 0 auto;
   padding: 0 76px;
 
+  @media screen and (max-width: 414px) {
+    padding: 0 20px;
+  }
+
   h1 {
     font-family: interstate-mono, monospace;
     font-weight: 700;
