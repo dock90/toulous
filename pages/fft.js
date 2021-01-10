@@ -7,8 +7,7 @@ import Button from '../components/button'
 // styles
 const Content = styled.div`
   display: grid;
-  grid-template-rows: 1fr;
-  grid-template-columns: 1fr;
+  align-content: start;
   padding-left: 76px;
   padding-right: 76px;
 
@@ -20,6 +19,7 @@ const Content = styled.div`
 
 const Card = styled.div`
   display: grid;
+  align-content: start;
   border-radius: 40px;
   background: #FFFFFF;
   box-shadow: 5px 5px 50px 5px rgba(96,96,96,0.16);
