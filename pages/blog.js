@@ -14,7 +14,7 @@ const Container = styled.div`
   }
 
   article {
-    max-width: 600px;
+    max-width: 800px;
   }
 
   h2 {
