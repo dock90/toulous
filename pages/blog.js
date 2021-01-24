@@ -40,8 +40,7 @@ const query = `*[_type == "post"] | order(_createdAt desc) {
   title,
   overview,
   slug,
-}
-`;
+}`;
 
 const Posts = ({ posts }) => {
   return (

@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import styled from 'styled-components'
 import BlockContent from "@sanity/block-content-to-react";
 // components
@@ -34,16 +35,27 @@ const singlePostQuery = `*[_type == "post" && slug.current == $current] {
   _id,
   slug,
   title,
-  body
+  body,
+  seo
 }[0]
 `;
 
 const Post = ({ post }) => {
-  const { body, title } = post
+  const { body, title, seo } = post
   return (
     <Layout>
+      <Head>
+        <title>{title} | Blog</title>
+        <meta
+          name='title'
+          content={seo.title}
+        />
+        <meta
+          name="description"
+          content={seo.description}
+        />
+      </Head>
       <Container>
-
         <h1>{title}</h1>
         <BlockContent
           blocks={body}
