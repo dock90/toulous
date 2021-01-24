@@ -8,7 +8,7 @@ import sanity from '../../client'
 // styles
 const Container = styled.div`
   max-width: 800px;
-  margin: 0 auto;
+  margin: 0 auto 4rem auto;
   padding: 0 76px;
 
   @media screen and (max-width: 414px) {
@@ -19,11 +19,31 @@ const Container = styled.div`
     font-family: interstate-mono, monospace;
     font-weight: 700;
     color: ${({ theme }) => theme.colors.primary};
+    margin-bottom: 3rem;
+  }
+
+  h2 {
+    font-family: interstate-mono, monospace;
+    color: ${({ theme }) => theme.colors.primary};
+    margin-top: 3rem;
   }
 
   p {
     font-family: interstate-mono, monospace;
     font-weight: 400;
+    color: ${({ theme }) => theme.colors.primary};
+    line-height: 1.8rem;
+  }
+
+  blockquote {
+    font-family: interstate-mono, monospace;
+    color: ${({ theme }) => theme.colors.primary};
+    margin: 0;
+    padding: 1rem;
+    border-left: 6px solid ${({ theme }) => theme.colors.primary};
+  }
+
+  a {
     color: ${({ theme }) => theme.colors.primary};
   }
 `
