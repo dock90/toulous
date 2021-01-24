@@ -29,10 +29,10 @@ const Intro = styled.div`
   }
 
   h3 {
-    font-size: 18px;
-    line-height: 32px;
+    font-size: 2rem;
+    line-height: 3rem;
     margin-bottom: 96px;
-    max-width: 350px;
+    max-width: 550px;
   }
 `
 
@@ -41,6 +41,10 @@ const Home = () => {
     <Layout>
       <Head>
         <title>Toulous</title>
+        <meta
+          name='title'
+          content='Toulous'
+        />
         <meta name="description" content="A tool that lets you repurpose existing content quickly and originally." />
       </Head>
       <Container>

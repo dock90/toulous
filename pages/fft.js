@@ -9,7 +9,7 @@ import Button from '../components/button'
 const Content = styled.div`
   display: grid;
   align-content: start;
-  padding: 0 76px;
+  padding: 0 76px 76px 76px;
 
   @media screen and (max-width: 414px) {
     padding: 0 20px;
@@ -125,7 +125,7 @@ const Fft = () => {
               <textarea
                 value={copy}
                 onChange={submitText}
-                placeholder='Copy text here...'
+                placeholder='Copy text here... (it needs at least one punctuation mark)'
                 rows={rows}
               />
             </Card>
